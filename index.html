@@ -33,15 +33,15 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Blog</a>
+        <a class="nav-link" href="blog.html">Blog</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Info
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">FAQ</a>
-          <a class="dropdown-item" href="#">Privacy policy</a>
+          <a class="dropdown-item" href="privacy.html">Privacy policy</a>
+		  <a class="dropdown-item" href="https://affiliate-program.amazon.com/help/operating/agreement">Amazon Affiliate Policy</a>
           
         </div>
       </li>
@@ -75,54 +75,87 @@
 							<input class="form-check-input" type="checkbox" data-brand="Lenovo" id="Lenovo">
 							<label class="form-check-label" for="Lenovo">Lenovo</label>
 						</div>
-					
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" data-brand="GIGABYTE" id="GIGABYTE">
+							<label class="form-check-label" for="GIGABYTE">GIGABYTE</label>
+						</div>
 					  </div>
 				  </fieldset>
 				  <fieldset class="pt-2">
 					<h5>Price</h5>
 					<div  class="border border-dark rounded p-2">
 						  <div class="form-check">
-							<input class="form-check-input" type="checkbox"id="under50" data-price="under50" checked>
-							<label class="form-check-label" for="under50">
-								Under $50
-							</label>
+							<input class="form-check-input" type="checkbox"id="under50" data-price="under50">
+							<label class="form-check-label" for="under50">Under $50</label>
 						  </div>
 						   <div class="form-check">
-							<input class="form-check-input" type="checkbox"id="50to100" data-price="50to100" checked>
-							<label class="form-check-label" for="50to100">
-								$50 to $100
-							</label>
+							<input class="form-check-input" type="checkbox"id="50to100" data-price="50to100">
+							<label class="form-check-label" for="50to100">$50 to $100</label>
 						  </div>
 						   <div class="form-check">
-							<input class="form-check-input" type="checkbox"id="100to200" data-price="100to200" checked>
-							<label class="form-check-label" for="100to200">
-								$100 to $200
-							</label>
+							<input class="form-check-input" type="checkbox"id="100to200" data-price="100to200">
+							<label class="form-check-label" for="100to200">$100 to $200</label>
 						  </div>
 						   <div class="form-check">
-							<input class="form-check-input" type="checkbox"id="200to300" data-price="200to300" checked>
-							<label class="form-check-label" for="200to300">
-								$200 to $300
-							</label>
+							<input class="form-check-input" type="checkbox"id="200to300" data-price="200to300">
+							<label class="form-check-label" for="200to300">$200 to $300</label>
 						  </div>
 						  <div class="form-check">
-							<input class="form-check-input" type="checkbox"id="300above" data-price="300above" checked>
-							<label class="form-check-label" for="300above">
-								$300 and Above
-							</label>
+							<input class="form-check-input" type="checkbox"id="300above" data-price="300above">
+							<label class="form-check-label" for="300above">$300 and Above</label>
 						  </div>
-					
+					  </div>
+				  </fieldset>
+				 <fieldset class="pt-2">
+					<h5>GHz</h5>
+					<div  class="border border-dark rounded p-2">
+						  <div class="form-check">
+							<input class="form-check-input" type="checkbox"id="1to1.5" data-clock="1to1.5">
+							<label class="form-check-label" for="1to1.5">1 to 1.5</label>
+						  </div>
+						   <div class="form-check">
+							<input class="form-check-input" type="checkbox"id="1.5to2" data-clock="1.5to2">
+							<label class="form-check-label" for="1.5to2">1.5 to 2</label>
+						  </div>
+						   <div class="form-check">
+							<input class="form-check-input" type="checkbox"id="2to2.5" data-clock="2to2.5">
+							<label class="form-check-label" for="2to2.5">2 to 2.5</label>
+						  </div>
+						   <div class="form-check">
+							<input class="form-check-input" type="checkbox"id="2.5to3" data-clock="2.5to3">
+							<label class="form-check-label" for="2.5to3">2.5 to 3</label>
+						  </div>
+					  </div>
+				  </fieldset>
+				  <fieldset class="pt-2">
+					<h5>Memory</h5>
+					<div  class="border border-dark rounded p-2">
+						  <div class="form-check">
+							<input class="form-check-input" type="checkbox"id="mem6" data-mem="mem6">
+							<label class="form-check-label" for="mem6">6GB</label>
+						  </div>
+						   <div class="form-check">
+							<input class="form-check-input" type="checkbox"id="mem8" data-mem="mem8">
+							<label class="form-check-label" for="mem8">8GB</label>
+						  </div>
+						   <div class="form-check">
+							<input class="form-check-input" type="checkbox"id="mem10" data-mem="mem10">
+							<label class="form-check-label" for="mem10">10GB</label>
+						  </div>
+						   <div class="form-check">
+							<input class="form-check-input" type="checkbox"id="mem12" data-mem="mem12">
+							<label class="form-check-label" for="mem12">12GB</label>
+						  </div>
+
 					  </div>
 					
 				  </fieldset>
-				 
-				  
 		   
 				  
 		   
 
 				  
-				  <fieldset class="pt-4">
+				  <fieldset class="pt-4 pb-4">
 					  This site is supported by paid affiliate links. <a href="/faq.html#disclosures">Learn more</a>
 				  </fieldset>
 				</div>
@@ -136,39 +169,41 @@
 					  <th scope="col">Brand</th>
 					  <th scope="col">Coprocessor</th>
 					  <th scope="col">Video Memory</th>
-					  <th scope="col">Game Clock/Boost Clock</th>
+					  <th scope="col">Clock</th>
 					  <th scope="col">Video Output</th>
-					  <th scope="col">Memory Clock</th>
-					  <th scope="col">Memtory Interface</th>
 					  <th scope="col">Name</th>
 					</tr>
 				  </thead>
 				  <tbody id="diskprices-body" lang="en">
 				  
-					<tr class="gpu" data-brand="PowerColor" data-price="300above">
-					  <td scope="row">$349</td>
-					  <td>PowerColor</td>
-					  <td>AMD Radeon RX 6700 XT</td>
+					<tr class="gpu" data-brand="ASUS" data-price="300above" data-mem="mem12" data-clock="1.5to2">
+					  <td scope="row">$300</td>
+					  <td>ASUS</td>
+					  <td>NVIDIA GeForce RTX 3060</td>
 					  <td>12GB GDDR6</td>
-					  <td>2424MHz/2581MHz</td>
-					  <td>DisplayPort, HDMI</td>
-					  <td>16 Gbps</td>
-					  <td>192-bit</td>
-					  <td class="text-break"><a href="https://www.amazon.com/PowerColor-Fighter-Graphics-Raytracing-Infinity/dp/B08Y91QVG8/ref=sr_1_3?crid=31QDY9H8KNQJ3&keywords=Computer%2BGraphics%2BCards&qid=1703713239&s=electronics&sprefix=computer%2Bgraphics%2Bcards%2Celectronics%2C129&sr=1-3&th=1">PowerColor Fighter AMD Radeon RX 6700 XT Gaming Graphics ....</a></td>
+					  <td>1.87GHz</td>
+					  <td>DisplayPort</td>
+					  <td class="text-break"><a href="https://amzn.to/3THfR9o">ASUS Dual NVIDIA GeForce RTX 3060 ....</a></td>
 					</tr>
 				  
-				  <tr class="gpu" data-brand="AMD" data-price="100to200">
-					  <td scope="row">$150</td>
-					  <td>AMD</td>
-					  <td>AMD Radeon RX 6700 XT</td>
-					  <td>12GB GDDR6</td>
-					  <td>2424MHz/2581MHz</td>
-					  <td>DisplayPort, HDMI</td>
-					  <td>16 Gbps</td>
-					  <td>192-bit</td>
-					  <td><a href="https://www.amazon.com/PowerColor-Fighter-Graphics-Raytracing-Infinity/dp/B08Y91QVG8/ref=sr_1_3?crid=31QDY9H8KNQJ3&keywords=Computer%2BGraphics%2BCards&qid=1703713239&s=electronics&sprefix=computer%2Bgraphics%2Bcards%2Celectronics%2C129&sr=1-3&th=1">PowerColor Fighter AMD Radeon...</a></td>
+				  <tr class="gpu" data-brand="ASUS" data-price="300above" data-mem="mem8" data-clock="2.5to3">
+					  <td scope="row">$400</td>
+					  <td>ASUS</td>
+					  <td>NVIDIA GeForce RTX 4060 Ti</td>
+					  <td>8GB GDDR6</td>
+					  <td>2.56GHz</td>
+					  <td>HDMI</td>
+					  <td><a href="https://amzn.to/47b1CwB">ASUS Dual GeForce RTX™ 4060 ...</a></td>
 					</tr>
-				  
+				  <tr class="gpu" data-brand="GIGABYTE" data-price="300above" data-mem="mem12" data-clock="1.5to2">
+					  <td scope="row">$300</td>
+					  <td>GIGABYTE</td>
+					  <td>NVIDIA GeForce RTX 3060</td>
+					  <td>12GB GDDR6</td>
+					  <td>1.837GHz</td>
+					  <td>DisplayPort, HDMI</td>
+					  <td><a href="https://amzn.to/3vgAaAd">GIGABYTE GeForce RTX 3060 Gaming OC 12G (REV2.0) ...</a></td>
+					</tr>
 				  
 				  </tbody>
 			  </table>
@@ -177,7 +212,7 @@
 		</div>
 		<footer class="footer">
       <div class="container">
-        <span id="disclosures" class="text-muted">Last updated at 2023-12-27 12:50:30 UTC. As an Amazon Associate I earn from qualifying purchases. Product prices and availability are accurate as of the date/time indicated and are subject to change. Any price and availability information displayed at the time of purchase will apply to the purchase of the product. CERTAIN CONTENT THAT APPEARS ON THIS SITE COMES FROM AMAZON SERVICES LLC. THIS CONTENT IS PROVIDED 'AS IS' AND IS SUBJECT TO CHANGE OR REMOVAL AT ANY TIME. All other content is Copyright Legitimate Data Company, LLC. All rights reserved.</</span>
+        <span id="disclosures" class="text-muted">As an Amazon Affiliate I earn from qualifying purchases. Product prices and availability are subject to change. Any price and availability information displayed at the time of purchase will apply to the purchase of the product. CERTAIN CONTENT THAT APPEARS ON THIS SITE COMES FROM AMAZON SERVICES LLC. THIS CONTENT IS PROVIDED 'AS IS' AND IS SUBJECT TO CHANGE OR REMOVAL AT ANY TIME. All rights reserved.</</span>
       </div>
     </footer>
  
