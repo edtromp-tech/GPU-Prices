@@ -4,19 +4,25 @@
     function updateTable() {
       const brandFilter = getCheckedCheckboxes('brand');
       const priceFilter = getCheckedCheckboxes('price');
+	  const memFilter = getCheckedCheckboxes('mem');
+      const clockFilter = getCheckedCheckboxes('clock');
 
       // Iterate through each GPU row
       const gpuRows = document.querySelectorAll('.gpu');
       gpuRows.forEach(function (row) {
         const brand = row.getAttribute('data-brand');
         const price = row.getAttribute('data-price');
+		const mem = row.getAttribute('data-mem');
+        const clock = row.getAttribute('data-clock');
 
         // Check if the row meets the filter criteria
         const brandMatch = brandFilter.includes(brand) || brandFilter.length === 0;
         const priceMatch = priceFilter.includes(price) || priceFilter.length === 0;
+		const memMatch = memFilter.includes(mem) || memFilter.length === 0;
+        const clockMatch = clockFilter.includes(clock) || clockFilter.length === 0;
 
         // Show or hide the row based on filter criteria
-        row.style.display = brandMatch && priceMatch ? '' : 'none';
+        row.style.display = brandMatch && priceMatch && memMatch && clockMatch ? '' : 'none';
       });
     }
 
@@ -29,7 +35,7 @@
     }
 
     // Attach change event listeners to the brand and price checkboxes
-    document.querySelectorAll('[data-brand], [data-price]').forEach(function (checkbox) {
+    document.querySelectorAll('[data-brand], [data-price], [data-mem], [data-clock]').forEach(function (checkbox) {
       checkbox.addEventListener('change', updateTable);
     });
   });
