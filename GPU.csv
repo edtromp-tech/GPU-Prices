@@ -1,0 +1,11 @@
+﻿Price,Brand,Coprocessor,Video Memory,Clock,Video Output,Link,data-brand,data-mem,data-price,data-clock,data-processor,data-ram,i
+$890 ,ASUS,NVIDIA GeForce RTX 4070 TI,12GB GDDR6X,2310 MHz,HDMI,https://amzn.to/4aGZZcI,ASUS,mem12,500above,2to2.5,NVIDIAGeForceRTX4070TI,GDDR6X,
+99,ARDIYES,RX 580,8GB GDDR5,1286 MHz,HDMI;DisplayPort,https://amzn.to/3tsV6n9 ,ARDIYES,mem8,under100,1to1.5,RX580,GDDR5,
+$500 ,XFX,AMD Radeon RX 6800 XT,16GB GDDR6,,HDMI;DisplayPort,https://amzn.to/4aPvX6W ,XFX,mem16,500above,,AMDRadeonRX6800XT,GDDR6,
+300,ASUS,NVIDIA GeForce RTX 3060,12GB GDDR6,1870 MHz,DisplayPort,https://amzn.to/3THfR9o,ASUS,mem12,300to400,1.5to2,NVIDIAGeForceRTX3060,GDDR6,
+400,ASUS,NVIDIA GeForce RTX 4060 Ti,8GB GDDR6,2560 MHz,HDMI,https://amzn.to/47b1CwB,ASUS,mem8,400to500,2.5to3,NVIDIAGeForceRTX4060Ti,GDDR6,
+300,GIGABYTE,NVIDIA GeForce RTX 3060,12GB GDDR6,1837 MHz,HDMI;DisplayPort,https://amzn.to/3vgAaAd,GIGABYTE,mem12,300to400,1.5to2,NVIDIAGeForceRTX3060,GDDR6,
+143,RTZY,NVIDIA GeForce GTX 1060,6GB GDDR5,1759 MHz,DVI,https://amzn.to/3tzLhDP,RTZY,mem6,100to200,1.5to2,NVIDIAGeForceGTX1060,GDDR5,
+330,ZOTAC,NVIDIA GeForce RTX 3060,12GB GDDR6,1807 MHz,HDMI;DisplayPort,https://amzn.to/48xcHJk,ZOTAC,mem12,300to400,1.5to2,NVIDIAGeForceRTX3060,GDDR6,
+450,GIGABYTE,NVIDIA GeForce RTX 3070,8GB GDDR6,1815 MHz,HDMI;DisplayPort,https://amzn.to/3H7cnFj,GIGABYTE,mem8,400to500,1.5to2,NVIDIAGeForceRTX3070,GDDR6,
+115,maxsun,AMD Radeon RX 580,8GB GDDR5,1206 MHz,HDMI;DisplayPort;DVI,https://amzn.to/3RH8gEZ,maxsun,mem8,100to200,1to1.5,AMDRadeonRX580,GDDR5,

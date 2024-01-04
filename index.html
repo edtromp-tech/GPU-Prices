@@ -103,8 +103,36 @@
                   <h5>Coprocessor</h5>
                   <div  class="border border-dark rounded p-2">
                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" data-processor="nvida" id="nvida">
-                        <label class="form-check-label" for="nvida">NVIDIA GeForce</label>
+                        <input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX4070TI" id="NVIDIAGeForceRTX4070TI">
+                        <label class="form-check-label" for="NVIDIAGeForceRTX4070TI">NVIDIA GeForce RTX 4070 TI</label>
+                     </div>
+					 <div class="form-check">
+                        <input class="form-check-input" type="checkbox" data-processor="RX580" id="RX580">
+                        <label class="form-check-label" for="RX580">RX 580</label>
+                     </div>
+					 <div class="form-check">
+                        <input class="form-check-input" type="checkbox" data-processor="AMDRadeonRX6800XT" id="AMDRadeonRX6800XT">
+                        <label class="form-check-label" for="AMDRadeonRX6800XT">AMD Radeon RX 6800 XT</label>
+                     </div>
+					 <div class="form-check">
+                        <input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX3060" id="NVIDIAGeForceRTX3060">
+                        <label class="form-check-label" for="NVIDIAGeForceRTX3060">NVIDIA GeForce RTX 3060</label>
+                     </div>
+					 <div class="form-check">
+                        <input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX4060Ti" id="NVIDIAGeForceRTX4060Ti">
+                        <label class="form-check-label" for="NVIDIAGeForceRTX4060Ti">NVIDIA GeForce RTX 4060 Ti</label>
+                     </div>
+					 <div class="form-check">
+                        <input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceGTX1060" id="NVIDIAGeForceGTX1060">
+                        <label class="form-check-label" for="NVIDIAGeForceGTX1060">NVIDIA GeForce GTX 1060</label>
+                     </div>
+					 <div class="form-check">
+                        <input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX3070" id="NVIDIAGeForceRTX3070">
+                        <label class="form-check-label" for="NVIDIAGeForceRTX3070">NVIDIA GeForce RTX 3070</label>
+                     </div>
+					 <div class="form-check">
+                        <input class="form-check-input" type="checkbox" data-processor="AMDRadeonRX580" id="AMDRadeonRX580">
+                        <label class="form-check-label" for="AMDRadeonRX580">AMD Radeon RX 580</label>
                      </div>
 				  </div>
                     
@@ -115,6 +143,10 @@
                      <div class="form-check">
                         <input class="form-check-input" type="checkbox" data-ram="GDDR6" id="GDDR6">
                         <label class="form-check-label" for="GDDR6">GDDR6</label>
+                     </div>
+					 <div class="form-check">
+                        <input class="form-check-input" type="checkbox" data-ram="GDDR6X" id="GDDR6X">
+                        <label class="form-check-label" for="GDDR6X">GDDR6X</label>
                      </div>
 					 <div class="form-check">
                         <input class="form-check-input" type="checkbox" data-ram="GDDR5" id="GDDR5">
@@ -192,6 +224,14 @@
                         <input class="form-check-input" type="checkbox"id="mem12" data-mem="mem12">
                         <label class="form-check-label" for="mem12">12GB</label>
                      </div>
+					 <div class="form-check">
+                        <input class="form-check-input" type="checkbox"id="mem14" data-mem="mem14">
+                        <label class="form-check-label" for="mem14">14GB</label>
+                     </div>
+					 <div class="form-check">
+                        <input class="form-check-input" type="checkbox"id="mem16" data-mem="mem16">
+                        <label class="form-check-label" for="mem16">16GB</label>
+                     </div>
                   </div>
                </fieldset>
                <fieldset class="pt-4 pb-4">
@@ -202,81 +242,17 @@
                <table id="diskprices" class="table table-sm table-striped">
                   <thead>
                      <tr id="diskprices-head">
-                        <th scope="col">Price</th>
                         <th scope="col">Brand</th>
+                        <th scope="col">Price</th>
                         <th scope="col">Coprocessor</th>
                         <th scope="col">Video Memory</th>
                         <th scope="col">Clock</th>
                         <th scope="col">Video Output</th>
-                        <th scope="col">Name</th>
+                        <th scope="col">Link</th>
                      </tr>
                   </thead>
-                  <tbody id="diskprices-body" lang="en">
-                     <tr class="gpu" data-brand="ASUS" data-price="300to400" data-mem="mem12" data-clock="1.5to2" data-processor="nvida" data-ram="GDDR6">
-                        <td scope="row">$300</td>
-                        <td>ASUS</td>
-                        <td>NVIDIA GeForce RTX 3060</td>
-                        <td>12GB GDDR6</td>
-                        <td>1.87GHz</td>
-                        <td>DisplayPort</td>
-                        <td class="text-break"><a href="https://amzn.to/3THfR9o">ASUS Dual NVIDIA GeForce RTX 3060 ....</a></td>
-                     </tr>
-                     <tr class="gpu" data-brand="ASUS" data-price="400to500" data-mem="mem8" data-clock="2.5to3" data-processor="nvida" data-ram="GDDR6">
-                        <td scope="row">$400</td>
-                        <td>ASUS</td>
-                        <td>NVIDIA GeForce RTX 4060 Ti</td>
-                        <td>8GB GDDR6</td>
-                        <td>2.56GHz</td>
-                        <td>HDMI</td>
-                        <td><a href="https://amzn.to/47b1CwB">ASUS Dual GeForce RTX™ 4060 ...</a></td>
-                     </tr>
-                     <tr class="gpu" data-brand="GIGABYTE" data-price="300to400" data-mem="mem12" data-clock="1.5to2" data-processor="nvida" data-ram="GDDR6">
-                        <td scope="row">$300</td>
-                        <td>GIGABYTE</td>
-                        <td>NVIDIA GeForce RTX 3060</td>
-                        <td>12GB GDDR6</td>
-                        <td>1.837GHz</td>
-                        <td>DisplayPort, HDMI</td>
-                        <td><a href="https://amzn.to/3vgAaAd">GIGABYTE GeForce RTX 3060 Gaming OC 12G (REV2.0) ...</a></td>
-                     </tr>
-					  <tr class="gpu" data-brand="RTZY" data-price="100to200" data-mem="mem6" data-clock="1.5to2" data-processor="nvida" data-ram="GDDR5">
-                        <td scope="row">$143</td>
-                        <td>RTZY</td>
-                        <td>NVIDIA GeForce GTX 1060</td>
-                        <td>6GB GDDR5</td>
-                        <td>1.759GHz</td>
-                        <td>DVI</td>
-                        <td><a href="https://amzn.to/3tzLhDP">GPU Graphics Card, 1759MHz Boost Clock 4K ...</a></td>
-                     </tr>
-					 <tr class="gpu" data-brand="ZOTAC" data-price="300to400" data-mem="mem12" data-clock="1.5to2" data-processor="nvida" data-ram="GDDR6">
-                        <td scope="row">$330</td>
-                        <td>ZOTAC</td>
-                        <td>NVIDIA GeForce RTX 3060</td>
-                        <td>12GB GDDR6</td>
-                        <td>1.807GHz</td>
-                        <td>DisplayPort, HDMI</td>
-                        <td><a href="https://amzn.to/48xcHJk">ZOTAC Gaming GeForce RTX 3060 Twin Edge OC 12GB GDDR6 192-bit 15 Gbps ...</a></td>
-                     </tr>
-					 <tr class="gpu" data-brand="GIGABYTE" data-price="400to500" data-mem="mem8" data-clock="1.5to2" data-processor="nvida" data-ram="GDDR6">
-                        <td scope="row">$450</td>
-                        <td>GIGABYTE</td>
-                        <td>NVIDIA GeForce RTX 3070</td>
-                        <td>8GB GDDR6</td>
-                        <td>1.815GHz</td>
-                        <td>DisplayPort, HDMI</td>
-                        <td><a href="https://amzn.to/3H7cnFj">GIGABYTE GeForce RTX 3070 Gaming OC 8G (REV2.0) Graphics Card, 3X WINDFORCE ...</a></td>
-                     </tr>
-					 <tr class="gpu" data-brand="maxsun" data-price="100to200" data-mem="mem8" data-clock="1to1.5" data-processor="amd" data-ram="GDDR5">
-                        <td scope="row">$115</td>
-                        <td>maxsun</td>
-                        <td>AMD Radeon RX 580</td>
-                        <td>8GB GDDR5</td>
-                        <td>1.206GHz</td>
-                        <td>DisplayPort, DVI, HDMI</td>
-                        <td><a href="https://amzn.to/3RH8gEZ">maxsun AMD Radeon RX 580 8GB 2048SP GDDR5 Computer Video Graphics Card GPU  ...</a></td>
-                     </tr>
-                  </tbody>
-               </table>
+                  <tbody id="diskprices-body" lang="en"></tbody>
+				</table>
             </div>
          </div>
       </div>
@@ -287,6 +263,7 @@
       </footer>
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="index.js"></script>
+	  <script src="csvScript.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
    </body>
