@@ -109,7 +109,7 @@
                         <input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX4070TI" id="NVIDIAGeForceRTX4070TI">
                         <label class="form-check-label" for="NVIDIAGeForceRTX4070TI">NVIDIA GeForce RTX 4070 TI</label>
                      </div>-->
-					 <script type="text/javascript"> 
+					 <script type="text/javascript" defer> 
 					     // Fetch CSV data
     fetch('graphics.csv')
         .then(response => response.text())
@@ -120,15 +120,18 @@
 
             // Find indices of required columns
 			const gpuIndex = headers.indexOf('Processor');
+			const gpuIDIndex = headers.indexOf('gpuID');
 			
             // Populate table rows
             const graphicsDiv = document.getElementById('graphics');
+	
+			
 			// Inside the loop in js/csvGraphic.js
 			for (let i = 1; i < rows.length; i++) {
 				const values = rows[i].split(',');
 
 				const gpuName = values[gpuIndex];
-				gpuName = gpuName.trim();
+				const gpuID = values[gpuIDIndex];
 
 				const checkboxDiv = document.createElement('div');
 				checkboxDiv.className = 'form-check';
@@ -136,12 +139,12 @@
 				const inputCheckbox = document.createElement('input');
 				inputCheckbox.className = 'form-check-input';
 				inputCheckbox.type = 'checkbox';
-				inputCheckbox.dataset.processor = gpuName.replaceAll(' ', ''); // Add data-processor attribute
-				inputCheckbox.id = gpuName.replaceAll(' ', '');
+				inputCheckbox.dataset.processor = gpuID; // Add data-processor attribute
+				inputCheckbox.id = gpuID;
 
 				const labelCheckbox = document.createElement('label');
 				labelCheckbox.className = 'form-check-label';
-				labelCheckbox.setAttribute('for', gpuName.replaceAll(' ', ''));
+				labelCheckbox.setAttribute('for', gpuID);
 				labelCheckbox.textContent = gpuName;
 
 				checkboxDiv.appendChild(inputCheckbox);
@@ -150,9 +153,9 @@
 				graphicsDiv.appendChild(checkboxDiv);
 
 				// Update the GPU rows with the data-processor attribute
-				const gpuRows = document.querySelectorAll('.gpu[data-processor="' + gpuName.replaceAll(' ', '') + '"]');
+				const gpuRows = document.querySelectorAll('.gpu[data-processor="' + gpuID + '"]');
 				gpuRows.forEach(function (row) {
-					row.setAttribute('data-processor', gpuName.replaceAll(' ', ''));
+					row.setAttribute('data-processor', gpuID);
 				});
 			}
         })
