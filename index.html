@@ -127,7 +127,8 @@
 			for (let i = 1; i < rows.length; i++) {
 				const values = rows[i].split(',');
 
-				const gpuName = values[gpuIndex].trim();
+				const gpuName = values[gpuIndex];
+				gpuName = gpuName.trim();
 
 				const checkboxDiv = document.createElement('div');
 				checkboxDiv.className = 'form-check';
