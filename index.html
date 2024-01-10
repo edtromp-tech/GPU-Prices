@@ -11,11 +11,8 @@
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
       <link rel="manifest" href="/static/site.webmanifest">
       <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#000000">
-      <link rel="shortcut icon" href="/favicon.ico">
       <meta name="msapplication-TileColor" content="#000000">
       <meta name="theme-color" content="#ffffff">
    </head>
@@ -95,43 +92,74 @@
                         <input class="form-check-input" type="checkbox" data-brand="PNY" id="PNY">
                         <label class="form-check-label" for="PNY">PNY</label>
                      </div>
+					 <div class="form-check">
+                        <input class="form-check-input" type="checkbox" data-brand="SHOWKINGS" id="SHOWKINGS">
+                        <label class="form-check-label" for="SHOWKINGS">SHOWKINGS</label>
+                     </div>
+					 <div class="form-check">
+                        <input class="form-check-input" type="checkbox" data-brand="KAER" id="KAER">
+                        <label class="form-check-label" for="KAER">KAER</label>
+                     </div>
                   </div>
                </fieldset>
 			   <fieldset>
                   <h5>Coprocessor</h5>
-                  <div  class="border border-dark rounded p-2">
-                     <div class="form-check">
+                  <div id=graphics class="border border-dark rounded p-2" >
+                    <!-- <div class="form-check">
                         <input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX4070TI" id="NVIDIAGeForceRTX4070TI">
                         <label class="form-check-label" for="NVIDIAGeForceRTX4070TI">NVIDIA GeForce RTX 4070 TI</label>
-                     </div>
-					 <div class="form-check">
-                        <input class="form-check-input" type="checkbox" data-processor="RX580" id="RX580">
-                        <label class="form-check-label" for="RX580">RX 580</label>
-                     </div>
-					 <div class="form-check">
-                        <input class="form-check-input" type="checkbox" data-processor="AMDRadeonRX6800XT" id="AMDRadeonRX6800XT">
-                        <label class="form-check-label" for="AMDRadeonRX6800XT">AMD Radeon RX 6800 XT</label>
-                     </div>
-					 <div class="form-check">
-                        <input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX3060" id="NVIDIAGeForceRTX3060">
-                        <label class="form-check-label" for="NVIDIAGeForceRTX3060">NVIDIA GeForce RTX 3060</label>
-                     </div>
-					 <div class="form-check">
-                        <input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX4060Ti" id="NVIDIAGeForceRTX4060Ti">
-                        <label class="form-check-label" for="NVIDIAGeForceRTX4060Ti">NVIDIA GeForce RTX 4060 Ti</label>
-                     </div>
-					 <div class="form-check">
-                        <input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceGTX1060" id="NVIDIAGeForceGTX1060">
-                        <label class="form-check-label" for="NVIDIAGeForceGTX1060">NVIDIA GeForce GTX 1060</label>
-                     </div>
-					 <div class="form-check">
-                        <input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX3070" id="NVIDIAGeForceRTX3070">
-                        <label class="form-check-label" for="NVIDIAGeForceRTX3070">NVIDIA GeForce RTX 3070</label>
-                     </div>
-					 <div class="form-check">
-                        <input class="form-check-input" type="checkbox" data-processor="AMDRadeonRX580" id="AMDRadeonRX580">
-                        <label class="form-check-label" for="AMDRadeonRX580">AMD Radeon RX 580</label>
-                     </div>
+                     </div>-->
+					 <script type="text/javascript"> 
+					     // Fetch CSV data
+    fetch('graphics.csv')
+        .then(response => response.text())
+        .then(csvData => {
+            // Parse CSV data
+            const rows = csvData.split('\n');
+            const headers = rows[0].split(',');
+
+            // Find indices of required columns
+			const gpuIndex = headers.indexOf('Processor');
+			
+            // Populate table rows
+            const graphicsDiv = document.getElementById('graphics');
+			// Inside the loop in js/csvGraphic.js
+			for (let i = 1; i < rows.length; i++) {
+				const values = rows[i].split(',');
+
+				const gpuName = values[gpuIndex].trim();
+
+				const checkboxDiv = document.createElement('div');
+				checkboxDiv.className = 'form-check';
+
+				const inputCheckbox = document.createElement('input');
+				inputCheckbox.className = 'form-check-input';
+				inputCheckbox.type = 'checkbox';
+				inputCheckbox.dataset.processor = gpuName.replaceAll(' ', ''); // Add data-processor attribute
+				inputCheckbox.id = gpuName.replaceAll(' ', '');
+
+				const labelCheckbox = document.createElement('label');
+				labelCheckbox.className = 'form-check-label';
+				labelCheckbox.setAttribute('for', gpuName.replaceAll(' ', ''));
+				labelCheckbox.textContent = gpuName;
+
+				checkboxDiv.appendChild(inputCheckbox);
+				checkboxDiv.appendChild(labelCheckbox);
+
+				graphicsDiv.appendChild(checkboxDiv);
+
+				// Update the GPU rows with the data-processor attribute
+				const gpuRows = document.querySelectorAll('.gpu[data-processor="' + gpuName.replaceAll(' ', '') + '"]');
+				gpuRows.forEach(function (row) {
+					row.setAttribute('data-processor', gpuName.replaceAll(' ', ''));
+				});
+			}
+        })
+        .catch(error => console.error('Error fetching CSV:', error));
+					 
+					 
+					 
+					 </script>
 				  </div>
                     
                </fieldset>
@@ -272,8 +300,9 @@
             <span id="disclosures" class="text-muted">As an Amazon Affiliate I earn from qualifying purchases. Product prices and availability are subject to change. Any price and availability information displayed at the time of purchase will apply to the purchase of the product. CERTAIN CONTENT THAT APPEARS ON THIS SITE COMES FROM AMAZON SERVICES LLC. THIS CONTENT IS PROVIDED 'AS IS' AND IS SUBJECT TO CHANGE OR REMOVAL AT ANY TIME. All rights reserved.</</span>
          </div>
       </footer>
+	 
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-      <script src="js/index.js"></script>
+	  <script src="js/index.js"></script>
 	  <script src="js/csvScript.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
