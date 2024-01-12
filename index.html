@@ -104,68 +104,18 @@
                </fieldset>
 			   <fieldset>
                   <h5>Coprocessor</h5>
-                  <div id=graphics class="border border-dark rounded p-2" >
-                    <!-- <div class="form-check">
-                        <input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX4070TI" id="NVIDIAGeForceRTX4070TI">
-                        <label class="form-check-label" for="NVIDIAGeForceRTX4070TI">NVIDIA GeForce RTX 4070 TI</label>
-                     </div>-->
-					 <script type="text/javascript"> 
-					     // Fetch CSV data
-    fetch('Graphics.csv')
-        .then(response => response.text())
-        .then(csvData => {
-            // Parse CSV data
-            const rows = csvData.split('\n');
-            const headers = rows[0].split(',');
-
-            // Find indices of required columns
-			const gpuIndex = headers.indexOf('Processor');
-			const gpuIDIndex = headers.indexOf('gpuID');
-			
-            // Populate table rows
-            const graphicsDiv = document.getElementById('graphics');
-	
-			
-			// Inside the loop in js/csvGraphic.js
-			for (let i = 1; i < rows.length; i++) {
-				const values = rows[i].split(',');
-
-				const gpuName = values[gpuIndex];
-				const gpuID = values[gpuIDIndex];
-
-				const checkboxDiv = document.createElement('div');
-				checkboxDiv.className = 'form-check';
-
-				const inputCheckbox = document.createElement('input');
-				inputCheckbox.className = 'form-check-input';
-				inputCheckbox.type = 'checkbox';
-				inputCheckbox.dataset.processor = gpuID; // Add data-processor attribute
-				inputCheckbox.id = gpuID;
-
-				const labelCheckbox = document.createElement('label');
-				labelCheckbox.className = 'form-check-label';
-				labelCheckbox.setAttribute('for', gpuID);
-				labelCheckbox.textContent = gpuName;
-
-				checkboxDiv.appendChild(inputCheckbox);
-				checkboxDiv.appendChild(labelCheckbox);
-
-				graphicsDiv.appendChild(checkboxDiv);
-
-				// Update the GPU rows with the data-processor attribute
-				const gpuRows = document.querySelectorAll('.gpu[data-processor="' + gpuID + '"]');
-				gpuRows.forEach(function (row) {
-					row.setAttribute('data-processor', gpuID);
-				});
-			}
-        })
-        .catch(error => console.error('Error fetching CSV:', error));
-					 
-					 
-					 
-					 </script>
+                  <div id="graphics" class="border border-dark rounded p-2">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" data-processor="AMDRadeonRX5500XT" id="AMDRadeonRX5500XT">
+							<label class="form-check-label" for="AMDRadeonRX5500XT">AMD Radeon RX 5500 XT</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" data-processor="RX580" id="RX580">
+						<label class="form-check-label" for="RX580">RX 580</label></div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX4070TI" id="NVIDIAGeForceRTX4070TI">
+						<label class="form-check-label" for="NVIDIAGeForceRTX4070TI">NVIDIA GeForce RTX 4070 TI</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX3060" id="NVIDIAGeForceRTX3060"><label class="form-check-label" for="NVIDIAGeForceRTX3060">NVIDIA GeForce RTX 3060</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX4060Ti" id="NVIDIAGeForceRTX4060Ti"><label class="form-check-label" for="NVIDIAGeForceRTX4060Ti">NVIDIA GeForce RTX 4060 Ti</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX4070" id="NVIDIAGeForceRTX4070"><label class="form-check-label" for="NVIDIAGeForceRTX4070">NVIDIA GeForce RTX 4070</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX4060" id="NVIDIAGeForceRTX4060"><label class="form-check-label" for="NVIDIAGeForceRTX4060">NVIDIA GeForce RTX 4060</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX3070" id="NVIDIAGeForceRTX3070"><label class="form-check-label" for="NVIDIAGeForceRTX3070">NVIDIA GeForce RTX 3070</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX4060TI" id="NVIDIAGeForceRTX4060TI"><label class="form-check-label" for="NVIDIAGeForceRTX4060TI">NVIDIA GeForce RTX 4060 TI</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX4090" id="NVIDIAGeForceRTX4090"><label class="form-check-label" for="NVIDIAGeForceRTX4090">NVIDIA GeForce RTX 4090</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX2060" id="NVIDIAGeForceRTX2060"><label class="form-check-label" for="NVIDIAGeForceRTX2060">NVIDIA GeForce RTX 2060</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="AMDRadeonRX580" id="AMDRadeonRX580"><label class="form-check-label" for="AMDRadeonRX580">AMD Radeon RX 580</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceGTX1650" id="NVIDIAGeForceGTX1650"><label class="form-check-label" for="NVIDIAGeForceGTX1650">NVIDIA GeForce GTX 1650</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX4070Ti" id="NVIDIAGeForceRTX4070Ti"><label class="form-check-label" for="NVIDIAGeForceRTX4070Ti">NVIDIA GeForce RTX 4070 Ti</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceGTX1050" id="NVIDIAGeForceGTX1050"><label class="form-check-label" for="NVIDIAGeForceGTX1050">NVIDIA GeForce GTX 1050</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="AMDRadeonRX6600" id="AMDRadeonRX6600"><label class="form-check-label" for="AMDRadeonRX6600">AMD Radeon RX 6600</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceGTX1060" id="NVIDIAGeForceGTX1060"><label class="form-check-label" for="NVIDIAGeForceGTX1060">NVIDIA GeForce GTX 1060</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX" id="NVIDIAGeForceRTX"><label class="form-check-label" for="NVIDIAGeForceRTX">NVIDIA GeForce RTX</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="AMDRadeonRX6800XT" id="AMDRadeonRX6800XT"><label class="form-check-label" for="AMDRadeonRX6800XT">AMD Radeon RX 6800 XT</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="NVIDIAGeForceRTX3060Ti" id="NVIDIAGeForceRTX3060Ti"><label class="form-check-label" for="NVIDIAGeForceRTX3060Ti">NVIDIA GeForce RTX 3060 Ti</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="RX6600" id="RX6600"><label class="form-check-label" for="RX6600">RX 6600</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="AMDRadeonRX7800XT" id="AMDRadeonRX7800XT"><label class="form-check-label" for="AMDRadeonRX7800XT">AMD Radeon RX 7800 XT</label></div><div class="form-check"><input class="form-check-input" type="checkbox" data-processor="AMDRadeonRX6700" id="AMDRadeonRX6700"><label class="form-check-label" for="AMDRadeonRX6700">AMD Radeon RX 6700</label></div>
 				  </div>
-                    
                </fieldset>
 			   <fieldset>
                   <h5>Ram</h5>
